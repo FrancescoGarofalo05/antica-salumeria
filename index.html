@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Meta tag SEO e caratteri -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <!-- SEO Primario -->
+    <title>Antica Salumeria | Sapori autentici di Giugliano dal 1985</title>
+    <meta name="description" content="L'Antica Salumeria di Giugliano offre mozzarella di bufala, salumi tipici e prodotti campani di qualità. Vieni a trovarci in Via Roma 123.">
+    <meta name="keywords" content="salumeria, Giugliano, mozzarella, salumi, prodotti tipici, Campania, Napoli">
+    <meta name="author" content="Francesco Garofalo">
+    
+    <!-- Open Graph (Social sharing) -->
+    <meta property="og:title" content="Antica Salumeria - Sapori autentici di Giugliano">
+    <meta property="og:description" content="Mozzarella di bufala, salumi e prodotti tipici campani. Ordina su WhatsApp!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://antica-salumeria.vercel.app">
+    <meta property="og:image" content="./src/img/hero-salumeria.jpg">
+    
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍖</text></svg>">
+    
+    <!-- Swiper CSS (carosello) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- CSS Personalizzato -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Preload immagini critiche per performance -->
+    <link rel="preload" as="image" href="./src/img/hero-salumeria.jpg">
+</head>
+<body>
+    <!-- Pulsante "Salta al contenuto" per accessibilità (visibile solo a screen reader) -->
+    <a href="#main-content" class="skip-to-content" aria-label="Salta al contenuto principale">Salta al contenuto</a>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header" role="banner">
+        <div class="container header-container">
+            <!-- Logo + Titolo a sinistra -->
+            <div class="logo-area">
+                <a href="./index.html" class="logo-link" aria-label="Antica Salumeria - Home">
+                    <img src="./src/img/logo.png" 
+                         alt="Logo Antica Salumeria - Sagoma di un salame stilizzato" 
+                         class="logo-img"
+                         width="60" 
+                         height="60"
+                         loading="eager">
+                </a>
+                <span class="site-title">ANTICA SALUMERIA</span>
+            </div>
+
+            <!-- Menu Hamburger a destra -->
+            <nav class="main-nav" role="navigation" aria-label="Menu principale">
+                <button class="hamburger" 
+                        id="hamburger-btn" 
+                        aria-label="Apri menu" 
+                        aria-expanded="false" 
+                        aria-controls="mobile-menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="sr-only">Menu</span>
+                </button>
+                
+                <!-- Menu a tendina (nascosto di default, mostrato via JS) -->
+                <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+                    <ul class="menu-list">
+                        <li><a href="#chi-siamo" class="menu-link">Chi Siamo</a></li>
+                        <li><a href="#prodotti" class="menu-link">I Nostri Prodotti</a></li>
+                        <li><a href="#galleria" class="menu-link">Galleria</a></li>
+                        <li><a href="#contatti" class="menu-link">Contatti</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main id="main-content" role="main">
+        
+        <!-- HERO SECTION -->
+        <section class="hero" aria-label="Immagine di benvenuto">
+            <div class="hero-image-container">
+                <img src="./src/img/hero-salumeria.jpg" 
+                     alt="Bancone dell'Antica Salumeria con mozzarelle fresche, salumi appesi e formaggi tipici campani" 
+                     class="hero-img"
+                     loading="eager"
+                     fetchpriority="high">
+                <div class="hero-overlay">
+                    <div class="container">
+                        <h1 class="hero-title">I sapori autentici di Giugliano</h1>
+                        <p class="hero-subtitle">Tradizione e qualità dal 1985</p>
+                        <a href="#contatti" class="btn btn-primary">Scopri i nostri prodotti</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 CARD (Chi Siamo, Cosa Produciamo, Storia) -->
+        <section class="info-section" id="chi-siamo" aria-labelledby="info-heading">
+            <div class="container">
+                <h2 id="info-heading" class="section-title">La nostra eccellenza</h2>
+                <div class="card-grid">
+                    
+                    <!-- Card 1: Chi Siamo -->
+                    <article class="info-card">
+                        <div class="card-icon" aria-hidden="true">🧀</div>
+                        <h3 class="card-title">Chi Siamo</h3>
+                        <p class="card-text">Siamo una famiglia di mastri salumieri che dal 1960 porta sulle tavole di Giugliano i migliori prodotti caseari e salumi della tradizione campana. Passione, artigianalità e materie prime selezionate: questo è il nostro segreto.</p>
+                    </article>
+
+                    <!-- Card 2: Cosa Produciamo -->
+                    <article class="info-card">
+                        <div class="card-icon" aria-hidden="true">🥩</div>
+                        <h3 class="card-title">Cosa Produciamo</h3>
+                        <p class="card-text">Mozzarella di bufala campana DOP, ricotta fresca, salame Napoli, prosciutto crudo di Parma, pancetta, guanciale e molto altro. Ogni giorno lavoriamo solo prodotti freschi e genuini.</p>
+                    </article>
+
+                    <!-- Card 3: La Nostra Storia -->
+                    <article class="info-card">
+                        <div class="card-icon" aria-hidden="true">📜</div>
+                        <h3 class="card-title">La Nostra Storia</h3>
+                        <p class="card-text">Tutto iniziò nel 1960 quando nonno Antonio aprì una piccola bottega nel cuore di Giugliano. Oggi, la terza generazione porta avanti la tradizione con lo stesso amore di un tempo, unendo tecniche antiche e innovazione.</p>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERIA CAROSELLO (Swiper JS) -->
+        <section class="gallery-section" id="galleria" aria-labelledby="gallery-heading">
+            <div class="container">
+                <h2 id="gallery-heading" class="section-title">I nostri prodotti</h2>
+                <p class="section-subtitle">Scopri la qualità dei nostri salumi e formaggi</p>
+            </div>
+            
+            <!-- Slider Swiper -->
+            <div class="swiper product-swiper" aria-label="Carosello di immagini dei prodotti">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <figure class="slide-figure">
+                            <img src="./src/img/parmigiano.jpg" 
+                                 alt="parmigiano reggiano stagionato" 
+                                 class="slide-img"
+                                 loading="lazy">
+                            <figcaption class="slide-caption">parmigiano reggiano stagionato</figcaption>
+                        </figure>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <figure class="slide-figure">
+                            <img src="./src/img/salame.jpg" 
+                                 alt="Salame Napoli artigianale" 
+                                 class="slide-img"
+                                 loading="lazy">
+                            <figcaption class="slide-caption">Salame Napoli</figcaption>
+                        </figure>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <figure class="slide-figure">
+                            <img src="./src/img/prosciuttocrudo.jpg" 
+                                 alt="Prosciutto crudo stagionato" 
+                                 class="slide-img"
+                                 loading="lazy">
+                            <figcaption class="slide-caption">Prosciutto Crudo</figcaption>
+                        </figure>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <figure class="slide-figure">
+                            <img src="./src/img/ricotta.jpg" 
+                                 alt="Ricotta di bufala fresca" 
+                                 class="slide-img"
+                                 loading="lazy">
+                            <figcaption class="slide-caption">Ricotta di Bufala</figcaption>
+                        </figure>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <figure class="slide-figure">
+                            <img src="./src/img/pancetta.jpg" 
+                                 alt="Pancetta tesa artigianale" 
+                                 class="slide-img"
+                                 loading="lazy">
+                            <figcaption class="slide-caption">Pancetta Tesa</figcaption>
+                        </figure>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <figure class="slide-figure">
+                            <img src="./src/img/guanciale.jpg" 
+                                 alt="Guanciale di maiale" 
+                                 class="slide-img"
+                                 loading="lazy">
+                            <figcaption class="slide-caption">Guanciale</figcaption>
+                        </figure>
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="swiper-slide">
+                        <figure class="slide-figure">
+                            <img src="./src/img/olio.jpg" 
+                                 alt="Olio extravergine di oliva" 
+                                 class="slide-img"
+                                 loading="lazy">
+                            <figcaption class="slide-caption">Olio Extravergine</figcaption>
+                        </figure>
+                    </div>
+                    <!-- Slide 8 -->
+                    <div class="swiper-slide">
+                        <figure class="slide-figure">
+                            <img src="./src/img/formaggi.jpg" 
+                                 alt="Selezione di formaggi tipici" 
+                                 class="slide-img"
+                                 loading="lazy">
+                            <figcaption class="slide-caption">Formaggi Tipici</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <!-- Paginazione e navigazione -->
+                <div class="swiper-pagination" aria-hidden="true"></div>
+                <div class="swiper-button-prev" aria-label="Slide precedente"></div>
+                <div class="swiper-button-next" aria-label="Slide successiva"></div>
+            </div>
+        </section>
+
+        <!-- SEZIONE CONTATTI / ORDINA SU WHATSAPP -->
+        <section class="contact-section" id="contatti" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 id="contact-heading" class="section-title">Vieni a trovarci</h2>
+                        <address class="contact-address">
+                            <p><strong>📍 Indirizzo:</strong> Via Roma 123, Giugliano in Campania (NA)</p>
+                            <p><strong>🕒 Orari:</strong> Lun-Sab 8:00-20:00 | Dom 8:00-13:00</p>
+                            <p><strong>📞 Telefono:</strong> +39 333 1234567</p>
+                        </address>
+                        
+                        <!-- Pulsante WhatsApp -->
+                        <a href="https://wa.me/393331234567" 
+                           class="btn btn-whatsapp" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Ordina su WhatsApp (si apre in una nuova finestra)">
+                            <span aria-hidden="true">💬</span> Ordina su WhatsApp
+                        </a>
+                    </div>
+                    
+                    <!-- Mappa Google (Placeholder) -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12071.48936428197!2d14.2095!3d40.9305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133babbd6c5e6b5d%3A0xabcdef1234567890!2sVia%20Roma%2C%20Giugliano%20in%20Campania%20NA!5e0!3m2!1sit!2sit!4v1712345678901!5m2!1sit!2sit" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Mappa di Via Roma, Giugliano in Campania"
+                                aria-label="Mappa interattiva della posizione dell'Antica Salumeria">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="/privacy" class="footer-link">Privacy Policy</a>
+                <span class="footer-separator" aria-hidden="true">|</span>
+                <a href="/cookie" class="footer-link">Cookie Policy</a>
+            </div>
+            <p class="copyright">
+                © 2026 Antica Salumeria - Tutti i diritti riservati | P.IVA 01234567890<br>
+                Designed by <strong>Francesco Garofalo</strong>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOAT BUTTON (WhatsApp/Instagram) ==================== -->
+    <div class="float-widget" aria-label="Contatti rapidi">
+        <!-- Pulsante principale con omino -->
+        <button class="float-btn float-btn-main" 
+                id="float-toggle" 
+                aria-label="Apri contatti WhatsApp e Instagram" 
+                aria-expanded="false" 
+                aria-controls="float-menu">
+            <span aria-hidden="true">👤</span>
+        </button>
+        
+        <!-- Menu espandibile -->
+        <div class="float-menu" id="float-menu" aria-hidden="true">
+            <a href="https://wa.me/393333334567" 
+               class="float-btn float-wa" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Contattaci su WhatsApp">
+                <span aria-hidden="true">💬</span>
+                <span class="float-label">WhatsApp</span>
+            </a>
+            <a href="https://instagram.com" 
+               class="float-btn float-ig" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               aria-label="Seguici su Instagram">
+                <span aria-hidden="true">📷</span>
+                <span class="float-label">Instagram</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JavaScript Personalizzato -->
+    <script src="./js/main.js"></script>
+    
+    <!-- Inizializzazione Swiper (minima) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verrà espanso nel file main.js
+            console.log('Antica Salumeria - Sito caricato');
+        });
+    </script>
+</body>
+</html>
