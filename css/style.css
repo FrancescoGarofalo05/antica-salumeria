@@ -1,5 +1,5 @@
 /* ============================================================
-   ANTICA SALUMERIA - STYLE.CSS (VERSIONE 2.0 - MOBILE FIRST)
+   ANTICA SALUMERIA - STYLE.CSS (VERSIONE 2.1 - CON EFFETTI HOVER)
    Design: Mobile-first, responsive, accessibile
    Autore: Francesco Garofalo
    ============================================================ */
@@ -24,6 +24,7 @@
     --border-radius-md: 16px;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 16px 32px rgba(0, 0, 0, 0.16);
     --transition: all 0.3s ease;
 }
 
@@ -150,6 +151,10 @@ h1, h2, h3 {
     transition: var(--transition);
 }
 
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
 .logo-img {
     width: 40px;
     height: 40px;
@@ -188,6 +193,10 @@ h1, h2, h3 {
     background: var(--color-dark);
     border-radius: 3px;
     transition: var(--transition);
+}
+
+.hamburger:hover .hamburger-line {
+    background: var(--color-primary);
 }
 
 .hamburger.active .hamburger-line:nth-child(1) {
@@ -243,6 +252,7 @@ h1, h2, h3 {
 .menu-link:hover {
     background: var(--color-light);
     color: var(--color-primary);
+    padding-left: 2rem;
 }
 
 /* ---------- HERO (MOBILE) ---------- */
@@ -264,6 +274,11 @@ h1, h2, h3 {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 8s ease;
+}
+
+.hero:hover .hero-img {
+    transform: scale(1.05);
 }
 
 .hero-overlay {
@@ -285,12 +300,14 @@ h1, h2, h3 {
     font-size: clamp(1.8rem, 8vw, 3.5rem);
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    animation: fadeInUp 0.8s ease;
 }
 
 .hero-subtitle {
     font-size: clamp(1rem, 4vw, 1.5rem);
     margin-bottom: 1.5rem;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    animation: fadeInUp 0.8s ease 0.2s both;
 }
 
 /* ---------- BOTTONI ---------- */
@@ -310,10 +327,14 @@ h1, h2, h3 {
 .btn-primary {
     background: var(--color-primary);
     color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    animation: fadeInUp 0.8s ease 0.4s both;
 }
 
 .btn-primary:hover {
     background: var(--color-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
 .btn-whatsapp {
@@ -321,9 +342,16 @@ h1, h2, h3 {
     color: var(--color-white);
     margin-top: 1rem;
     display: inline-block;
+    box-shadow: var(--shadow-sm);
 }
 
-/* ---------- 3 CARD (MOBILE: 1 COLONNA) ---------- */
+.btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* ---------- 3 CARD (CON EFFETTI HOVER RIPRISTINATI) ---------- */
 .info-section {
     padding: var(--section-spacing) 0;
     background: var(--color-white);
@@ -343,11 +371,24 @@ h1, h2, h3 {
     box-shadow: var(--shadow-sm);
     text-align: center;
     border: 1px solid rgba(139, 69, 19, 0.1);
+    transition: var(--transition);
+    cursor: default;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-primary);
 }
 
 .card-icon {
     font-size: 2.5rem;
     margin-bottom: 0.75rem;
+    transition: var(--transition);
+}
+
+.info-card:hover .card-icon {
+    transform: scale(1.1);
 }
 
 .card-title {
@@ -361,7 +402,7 @@ h1, h2, h3 {
     font-size: 0.95rem;
 }
 
-/* ---------- GALLERIA SWIPER (MOBILE) ---------- */
+/* ---------- GALLERIA SWIPER (CON EFFETTI HOVER) ---------- */
 .gallery-section {
     padding: var(--section-spacing) 0;
     background: var(--color-dark);
@@ -389,6 +430,11 @@ h1, h2, h3 {
     border-radius: var(--border-radius-md);
     overflow: hidden;
     height: auto;
+    transition: var(--transition);
+}
+
+.swiper-slide:hover {
+    transform: translateY(-5px);
 }
 
 .slide-figure {
@@ -402,6 +448,11 @@ h1, h2, h3 {
     height: 220px;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
+}
+
+.swiper-slide:hover .slide-img {
+    transform: scale(1.08);
 }
 
 .slide-caption {
@@ -410,6 +461,11 @@ h1, h2, h3 {
     padding: 0.75rem;
     font-weight: 600;
     font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.swiper-slide:hover .slide-caption {
+    background: var(--color-primary);
 }
 
 /* Swiper Navigation */
@@ -420,6 +476,13 @@ h1, h2, h3 {
     width: 40px !important;
     height: 40px !important;
     border-radius: 50%;
+    transition: var(--transition);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: var(--color-primary);
+    transform: scale(1.1);
 }
 
 .swiper-button-prev:after,
@@ -436,6 +499,12 @@ h1, h2, h3 {
     opacity: 0.6;
     width: 8px;
     height: 8px;
+    transition: var(--transition);
+}
+
+.swiper-pagination-bullet:hover {
+    opacity: 0.9;
+    transform: scale(1.2);
 }
 
 .swiper-pagination-bullet-active {
@@ -474,6 +543,12 @@ h1, h2, h3 {
     box-shadow: var(--shadow-sm);
     height: 250px;
     width: 100%;
+    transition: var(--transition);
+}
+
+.map-container:hover {
+    box-shadow: var(--shadow-hover);
+    transform: scale(1.02);
 }
 
 .map-container iframe {
@@ -509,6 +584,7 @@ h1, h2, h3 {
     color: var(--color-secondary);
     text-decoration: none;
     font-size: 0.9rem;
+    transition: var(--transition);
 }
 
 .footer-link:hover {
@@ -529,7 +605,7 @@ h1, h2, h3 {
     color: var(--color-secondary);
 }
 
-/* ---------- FLOAT WIDGET (MOBILE) ---------- */
+/* ---------- FLOAT WIDGET (CON EFFETTI HOVER) ---------- */
 .float-widget {
     position: fixed;
     bottom: 1rem;
@@ -556,9 +632,18 @@ h1, h2, h3 {
     font-size: 1.5rem;
 }
 
+.float-btn:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-hover);
+}
+
 .float-btn-main {
     background: var(--color-primary);
     color: var(--color-white);
+}
+
+.float-btn-main:hover {
+    background: var(--color-dark);
 }
 
 .float-menu {
@@ -582,9 +667,17 @@ h1, h2, h3 {
     color: white;
 }
 
+.float-wa:hover {
+    background: #128C7E;
+}
+
 .float-ig {
     background: #E1306C;
     color: white;
+}
+
+.float-ig:hover {
+    background: #C13584;
 }
 
 .float-label {
@@ -603,6 +696,19 @@ h1, h2, h3 {
 
 .float-btn:hover .float-label {
     opacity: 1;
+    right: 60px;
+}
+
+/* ---------- ANIMAZIONI KEYFRAMES ---------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ---------- TABLET (≥ 640px) ---------- */
